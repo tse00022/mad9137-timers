@@ -14,6 +14,7 @@
 		2C411B382CD52F62009083DD /* TimersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C411B372CD52F62009083DD /* TimersTests.swift */; };
 		2C411B422CD52F62009083DD /* TimersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C411B412CD52F62009083DD /* TimersUITests.swift */; };
 		2C411B442CD52F62009083DD /* TimersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C411B432CD52F62009083DD /* TimersUITestsLaunchTests.swift */; };
+		2C411B512CD53075009083DD /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C411B502CD53075009083DD /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		2C411B3D2CD52F62009083DD /* TimersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C411B412CD52F62009083DD /* TimersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersUITests.swift; sourceTree = "<group>"; };
 		2C411B432CD52F62009083DD /* TimersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C411B502CD53075009083DD /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				2C411B262CD52F5F009083DD /* TimersApp.swift */,
 				2C411B282CD52F5F009083DD /* ContentView.swift */,
+				2C411B502CD53075009083DD /* TimerView.swift */,
 				2C411B2A2CD52F62009083DD /* Assets.xcassets */,
 				2C411B2C2CD52F62009083DD /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C411B512CD53075009083DD /* TimerView.swift in Sources */,
 				2C411B292CD52F5F009083DD /* ContentView.swift in Sources */,
 				2C411B272CD52F5F009083DD /* TimersApp.swift in Sources */,
 			);
