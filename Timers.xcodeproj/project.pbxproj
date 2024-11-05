@@ -15,6 +15,8 @@
 		2C411B422CD52F62009083DD /* TimersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C411B412CD52F62009083DD /* TimersUITests.swift */; };
 		2C411B442CD52F62009083DD /* TimersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C411B432CD52F62009083DD /* TimersUITestsLaunchTests.swift */; };
 		2C411B512CD53075009083DD /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C411B502CD53075009083DD /* TimerView.swift */; };
+		2C411B532CD53BC3009083DD /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C411B522CD53BC3009083DD /* Timer.swift */; };
+		2C411B552CD53D2B009083DD /* TimerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C411B542CD53D2B009083DD /* TimerListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		2C411B412CD52F62009083DD /* TimersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersUITests.swift; sourceTree = "<group>"; };
 		2C411B432CD52F62009083DD /* TimersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2C411B502CD53075009083DD /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		2C411B522CD53BC3009083DD /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		2C411B542CD53D2B009083DD /* TimerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 				2C411B262CD52F5F009083DD /* TimersApp.swift */,
 				2C411B282CD52F5F009083DD /* ContentView.swift */,
 				2C411B502CD53075009083DD /* TimerView.swift */,
+				2C411B522CD53BC3009083DD /* Timer.swift */,
+				2C411B542CD53D2B009083DD /* TimerListView.swift */,
 				2C411B2A2CD52F62009083DD /* Assets.xcassets */,
 				2C411B2C2CD52F62009083DD /* Preview Content */,
 			);
@@ -263,6 +269,8 @@
 				2C411B512CD53075009083DD /* TimerView.swift in Sources */,
 				2C411B292CD52F5F009083DD /* ContentView.swift in Sources */,
 				2C411B272CD52F5F009083DD /* TimersApp.swift in Sources */,
+				2C411B532CD53BC3009083DD /* Timer.swift in Sources */,
+				2C411B552CD53D2B009083DD /* TimerListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
