@@ -13,6 +13,10 @@ struct TimerView: View {
     @State var minutes: TimeInterval = 0
     @State var seconds: TimeInterval = 0
     
+    @Binding var shouldCose: Bool
+    
+    @EnvironmentObject var model: TimersListViewModel
+    
     var body: some View {
         NavigationStack {
             VStack{
@@ -21,37 +25,54 @@ struct TimerView: View {
                 //Pickers
                 HStack{
                     Picker(
-                        selection: $hours, label:
-                            Text("Hours")){
-                                ForEach(0..<24){hour in
-                                    Text("\(hour)")
-                                }
-                            }.pickerStyle(WheelPickerStyle())
+                        selection: Binding(
+                            get: { Int(hours) },
+                            set: { hours = TimeInterval($0) }
+                        ),
+                        label: Text("Hours")
+                    ){
+                        ForEach(0..<24) { hour in
+                            Text("\(hour)").tag(hour)
+                        }
+                    }.pickerStyle(WheelPickerStyle())
                     Text("H")
                     
                     Picker(
-                        selection: $minutes, label:
-                            Text("Minutes")){
-                                ForEach(0..<60){minute in
-                                    Text("\(minute)")
-                                }
-                            }.pickerStyle(WheelPickerStyle())
+                        selection: Binding(
+                            get: { Int(minutes) },
+                            set: { minutes = TimeInterval($0) }
+                        ),
+                        label: Text("Minutes")
+                    ){
+                        ForEach(0..<60) { minute in
+                            Text("\(minute)").tag(minute)
+                        }
+                    }.pickerStyle(WheelPickerStyle())
                     Text("M")
                     
                     Picker(
-                        selection: $seconds, label:
-                            Text("Seconds")){
-                                ForEach(0..<60){second in
-                                    Text("\(second)")
-                                }
-                            }.pickerStyle(WheelPickerStyle())
+                        selection: Binding(
+                            get: { Int(seconds) },
+                            set: { seconds = TimeInterval($0) }
+                        ),
+                        label: Text("Seconds")
+                    ){
+                        ForEach(0..<60) { second in
+                            Text("\(second)").tag(second)
+                        }
+                    }.pickerStyle(WheelPickerStyle())
                     Text("S")
                 }
+                .padding()
                 .padding()
                 
                 // Presets
                 HStack{
-                    Button{} label:{
+                    Button{
+                        model.addNew(Timer(duration: 60))
+                        shouldCose.toggle()
+                        
+                    } label:{
                         VStack{
                             Text("1")
                             Text("min")
@@ -98,12 +119,14 @@ struct TimerView: View {
             }.toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button("Cancel") {
-                        print("Cancel")
+                        shouldCose.toggle()
                     }
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Start") {
-                        print("Start")
+                        let totalSeconds = hours * 3600 + minutes * 60 + seconds
+                        model.addNew(Timer(duration: totalSeconds))
+                        shouldCose.toggle()
                     }
                 }
             }
@@ -112,6 +135,6 @@ struct TimerView: View {
     }
 }
 
-#Preview {
-    TimerView()
-}
+//#Preview {
+//    TimerView()
+//}
